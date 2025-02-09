@@ -2,7 +2,7 @@
 
 # Pipeline de Dados - Indicium
 
-Este repositório contém um pipeline de dados que extrai dados de um banco de dados PostgreSQL e de arquivos CSV, processa e carrega esses dados em um banco de dados final.
+Este repositório contém um pipeline de dados projetado para automatizar a extração, processamento e carga de dados provenientes de duas fontes distintas: um banco de dados PostgreSQL e arquivos CSV. O pipeline realiza a extração diária dos dados, organiza esses dados em formatos apropriados e os grava tanto em arquivos locais quanto em um banco de dados PostgreSQL de destino. O objetivo final é permitir a análise integrada de dados, carregando informações de pedidos e seus detalhes, com a capacidade de reprocessar os dados conforme necessário.
 
 ## Requisitos
 
