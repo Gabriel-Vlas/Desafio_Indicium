@@ -1,0 +1,115 @@
+[2025-02-09T09:35:06.538+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-09T09:35:06.580+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Extract_CSV_data.run_meltano_script_csv manual__2025-02-09T09:29:56.342064+00:00 [queued]>
+[2025-02-09T09:35:06.599+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Extract_CSV_data.run_meltano_script_csv manual__2025-02-09T09:29:56.342064+00:00 [queued]>
+[2025-02-09T09:35:06.601+0000] {taskinstance.py:2866} INFO - Starting attempt 2 of 2
+[2025-02-09T09:35:06.814+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): run_meltano_script_csv> on 2025-02-09 09:29:56.342064+00:00
+[2025-02-09T09:35:06.825+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=68) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-09T09:35:06.828+0000] {standard_task_runner.py:72} INFO - Started process 70 to run task
+[2025-02-09T09:35:06.830+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Extract_CSV_data', 'run_meltano_script_csv', 'manual__2025-02-09T09:29:56.342064+00:00', '--job-id', '45', '--raw', '--subdir', 'DAGS_FOLDER/Extract_CSV_data.py', '--cfg-path', '/tmp/tmpz6g3hzok']
+[2025-02-09T09:35:06.833+0000] {standard_task_runner.py:105} INFO - Job 45: Subtask run_meltano_script_csv
+[2025-02-09T09:35:06.910+0000] {task_command.py:467} INFO - Running <TaskInstance: Extract_CSV_data.run_meltano_script_csv manual__2025-02-09T09:29:56.342064+00:00 [running]> on host 82ce0ea42bb9
+[2025-02-09T09:35:07.056+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Extract_CSV_data' AIRFLOW_CTX_TASK_ID='run_meltano_script_csv' AIRFLOW_CTX_EXECUTION_DATE='2025-02-09T09:29:56.342064+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-09T09:29:56.342064+00:00'
+[2025-02-09T09:35:07.059+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-09T09:35:07.060+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-09T09:35:07.060+0000] {logging_mixin.py:190} INFO - Current task name:run_meltano_script_csv state:running start_date:2025-02-09 09:35:06.581886+00:00
+[2025-02-09T09:35:07.061+0000] {logging_mixin.py:190} INFO - Dag name:Extract_CSV_data and current dag run status:running
+[2025-02-09T09:35:07.062+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-09T09:35:07.312+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/Extract_CSV_data.py", line 10, in run_meltano_script
+    subprocess.run(["python", script_path], check=True)
+  File "/usr/local/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', '/opt/airflow/meltano/meltano_project/transform/extract_data_csv.py']' returned non-zero exit status 1.
+[2025-02-09T09:35:07.336+0000] {logging_mixin.py:190} INFO - Task instance in failure state
+[2025-02-09T09:35:07.337+0000] {logging_mixin.py:190} INFO - Task start:2025-02-09 09:35:06.581886+00:00 end:2025-02-09 09:35:07.335500+00:00 duration:0.753614
+[2025-02-09T09:35:07.338+0000] {logging_mixin.py:190} INFO - Task:<Task(PythonOperator): run_meltano_script_csv> dag:<DAG: Extract_CSV_data> dagrun:<DagRun Extract_CSV_data @ 2025-02-09 09:29:56.342064+00:00: manual__2025-02-09T09:29:56.342064+00:00, state:running, queued_at: 2025-02-09 09:29:56.355138+00:00. externally triggered: True>
+[2025-02-09T09:35:07.339+0000] {logging_mixin.py:190} INFO - Failure caused by Command '['python', '/opt/***/meltano/meltano_project/transform/extract_data_csv.py']' returned non-zero exit status 1.
+[2025-02-09T09:35:07.340+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=Extract_CSV_data, task_id=run_meltano_script_csv, run_id=manual__2025-02-09T09:29:56.342064+00:00, execution_date=20250209T092956, start_date=20250209T093506, end_date=20250209T093507
+[2025-02-09T09:35:07.362+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-09T09:35:07.363+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 45 for task run_meltano_script_csv (Command '['python', '/opt/airflow/meltano/meltano_project/transform/extract_data_csv.py']' returned non-zero exit status 1.; 70)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/Extract_CSV_data.py", line 10, in run_meltano_script
+    subprocess.run(["python", script_path], check=True)
+  File "/usr/local/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', '/opt/airflow/meltano/meltano_project/transform/extract_data_csv.py']' returned non-zero exit status 1.
+[2025-02-09T09:35:07.410+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-02-09T09:35:07.439+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-09T09:35:07.443+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

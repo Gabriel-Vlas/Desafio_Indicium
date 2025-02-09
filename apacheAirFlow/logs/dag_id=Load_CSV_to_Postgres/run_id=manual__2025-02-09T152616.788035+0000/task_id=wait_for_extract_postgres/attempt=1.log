@@ -1,0 +1,209 @@
+[2025-02-09T15:26:20.583+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-09T15:26:20.615+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: load_csv_to_postgres.wait_for_extract_postgres manual__2025-02-09T15:26:16.788035+00:00 [queued]>
+[2025-02-09T15:26:20.630+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: load_csv_to_postgres.wait_for_extract_postgres manual__2025-02-09T15:26:16.788035+00:00 [queued]>
+[2025-02-09T15:26:20.632+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-09T15:26:20.837+0000] {taskinstance.py:2889} INFO - Executing <Task(ExternalTaskSensor): wait_for_extract_postgres> on 2025-02-09 15:26:16.788035+00:00
+[2025-02-09T15:26:20.848+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2212) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-09T15:26:20.852+0000] {standard_task_runner.py:72} INFO - Started process 2214 to run task
+[2025-02-09T15:26:20.852+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'load_csv_to_postgres', 'wait_for_extract_postgres', 'manual__2025-02-09T15:26:16.788035+00:00', '--job-id', '140', '--raw', '--subdir', 'DAGS_FOLDER/Load_CSV_to_Postgres.py', '--cfg-path', '/tmp/tmpjzzdeld7']
+[2025-02-09T15:26:20.854+0000] {standard_task_runner.py:105} INFO - Job 140: Subtask wait_for_extract_postgres
+[2025-02-09T15:26:20.924+0000] {task_command.py:467} INFO - Running <TaskInstance: load_csv_to_postgres.wait_for_extract_postgres manual__2025-02-09T15:26:16.788035+00:00 [running]> on host 8c410daec8d3
+[2025-02-09T15:26:21.049+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='load_csv_to_postgres' AIRFLOW_CTX_TASK_ID='wait_for_extract_postgres' AIRFLOW_CTX_EXECUTION_DATE='2025-02-09T15:26:16.788035+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-09T15:26:16.788035+00:00'
+[2025-02-09T15:26:21.051+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-09T15:26:21.051+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-09T15:26:21.052+0000] {logging_mixin.py:190} INFO - Current task name:wait_for_extract_postgres state:running start_date:2025-02-09 15:26:20.616241+00:00
+[2025-02-09T15:26:21.053+0000] {logging_mixin.py:190} INFO - Dag name:load_csv_to_postgres and current dag run status:running
+[2025-02-09T15:26:21.053+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-09T15:26:21.054+0000] {baseoperator.py:421} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-02-09T15:26:21.055+0000] {external_task.py:258} INFO - Poking for tasks ['extract_postgres_data'] in dag extract_postgres_and_csv_data on 2025-02-09T15:26:16.788035+00:00 ... 
+[2025-02-09T15:26:21.056+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:97: DeprecationWarning: This method is deprecated and will be removed in future.
+  return func(*args, session=session, **kwargs)
+
+[2025-02-09T15:27:19.265+0000] {external_task.py:258} INFO - Poking for tasks ['extract_postgres_data'] in dag extract_postgres_and_csv_data on 2025-02-09T15:26:16.788035+00:00 ... 
+[2025-02-09T15:28:17.467+0000] {external_task.py:258} INFO - Poking for tasks ['extract_postgres_data'] in dag extract_postgres_and_csv_data on 2025-02-09T15:26:16.788035+00:00 ... 
+[2025-02-09T15:29:15.687+0000] {external_task.py:258} INFO - Poking for tasks ['extract_postgres_data'] in dag extract_postgres_and_csv_data on 2025-02-09T15:26:16.788035+00:00 ... 
+[2025-02-09T15:30:13.904+0000] {external_task.py:258} INFO - Poking for tasks ['extract_postgres_data'] in dag extract_postgres_and_csv_data on 2025-02-09T15:26:16.788035+00:00 ... 
+[2025-02-09T15:31:12.106+0000] {external_task.py:258} INFO - Poking for tasks ['extract_postgres_data'] in dag extract_postgres_and_csv_data on 2025-02-09T15:26:16.788035+00:00 ... 
+[2025-02-09T15:32:10.317+0000] {external_task.py:258} INFO - Poking for tasks ['extract_postgres_data'] in dag extract_postgres_and_csv_data on 2025-02-09T15:26:16.788035+00:00 ... 
+[2025-02-09T15:32:59.948+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to None. Terminating instance.
+[2025-02-09T15:32:59.949+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-02-09T15:32:59.953+0000] {process_utils.py:132} INFO - Sending 15 to group 2214. PIDs of all processes in the group: [2214]
+[2025-02-09T15:32:59.954+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 2214
+[2025-02-09T15:32:59.955+0000] {taskinstance.py:3093} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-02-09T15:32:59.978+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/sensors/external_task.py", line 348, in execute
+    super().execute(context)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/sensors/base.py", line 334, in execute
+    time.sleep(self._get_next_poke_interval(started_at, run_duration, poke_count))
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3095, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+[2025-02-09T15:32:59.987+0000] {logging_mixin.py:190} INFO - Task instance in failure state
+[2025-02-09T15:32:59.988+0000] {logging_mixin.py:190} INFO - Task start:2025-02-09 15:26:20.616241+00:00 end:2025-02-09 15:32:59.985982+00:00 duration:399.369741
+[2025-02-09T15:32:59.989+0000] {logging_mixin.py:190} INFO - Task:<Task(ExternalTaskSensor): wait_for_extract_postgres> dag:<DAG: load_csv_to_postgres> dagrun:<DagRun load_csv_to_postgres @ 2025-02-09 15:26:16.788035+00:00: manual__2025-02-09T15:26:16.788035+00:00, state:running, queued_at: 2025-02-09 15:26:16.801411+00:00. externally triggered: True>
+[2025-02-09T15:32:59.991+0000] {logging_mixin.py:190} INFO - Failure caused by Task received SIGTERM signal
+[2025-02-09T15:32:59.992+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=load_csv_to_postgres, task_id=wait_for_extract_postgres, run_id=manual__2025-02-09T15:26:16.788035+00:00, execution_date=20250209T152616, start_date=20250209T152620, end_date=20250209T153259
+[2025-02-09T15:33:00.044+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-09T15:33:00.047+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 140 for task wait_for_extract_postgres ((psycopg2.errors.ForeignKeyViolation) insert or update on table "task_fail" violates foreign key constraint "task_fail_ti_fkey"
+DETAIL:  Key (dag_id, task_id, run_id, map_index)=(load_csv_to_postgres, wait_for_extract_postgres, manual__2025-02-09T15:26:16.788035+00:00, -1) is not present in table "task_instance".
+
+[SQL: INSERT INTO task_fail (task_id, dag_id, run_id, map_index, start_date, end_date, duration) VALUES (%(task_id)s, %(dag_id)s, %(run_id)s, %(map_index)s, %(start_date)s, %(end_date)s, %(duration)s) RETURNING task_fail.id]
+[parameters: {'task_id': 'wait_for_extract_postgres', 'dag_id': 'load_csv_to_postgres', 'run_id': 'manual__2025-02-09T15:26:16.788035+00:00', 'map_index': -1, 'start_date': datetime.datetime(2025, 2, 9, 15, 26, 20, 616241, tzinfo=Timezone('UTC')), 'end_date': datetime.datetime(2025, 2, 9, 15, 32, 59, 985982, tzinfo=Timezone('UTC')), 'duration': 399}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj); 2214)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/sensors/external_task.py", line 348, in execute
+    super().execute(context)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/sensors/base.py", line 334, in execute
+    time.sleep(self._get_next_poke_interval(started_at, run_duration, poke_count))
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3095, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+    self.dialect.do_execute(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.ForeignKeyViolation: insert or update on table "task_fail" violates foreign key constraint "task_fail_ti_fkey"
+DETAIL:  Key (dag_id, task_id, run_id, map_index)=(load_csv_to_postgres, wait_for_extract_postgres, manual__2025-02-09T15:26:16.788035+00:00, -1) is not present in table "task_instance".
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 327, in _run_raw_task
+    ti.handle_failure(e, test_mode, context, session=session)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3428, in handle_failure
+    _handle_failure(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/api_internal/internal_api_call.py", line 166, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 1243, in _handle_failure
+    TaskInstance.save_to_db(failure_context["ti"], session)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/api_internal/internal_api_call.py", line 166, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3400, in save_to_db
+    session.flush()
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 3449, in flush
+    self._flush(objects)
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 3588, in _flush
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 3549, in _flush
+    flush_context.execute()
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 456, in execute
+    rec.execute(self)
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 630, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    _emit_insert_statements(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 1238, in _emit_insert_statements
+    result = connection._execute_20(
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1710, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 334, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1577, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1953, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2134, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+    self.dialect.do_execute(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.ForeignKeyViolation) insert or update on table "task_fail" violates foreign key constraint "task_fail_ti_fkey"
+DETAIL:  Key (dag_id, task_id, run_id, map_index)=(load_csv_to_postgres, wait_for_extract_postgres, manual__2025-02-09T15:26:16.788035+00:00, -1) is not present in table "task_instance".
+
+[SQL: INSERT INTO task_fail (task_id, dag_id, run_id, map_index, start_date, end_date, duration) VALUES (%(task_id)s, %(dag_id)s, %(run_id)s, %(map_index)s, %(start_date)s, %(end_date)s, %(duration)s) RETURNING task_fail.id]
+[parameters: {'task_id': 'wait_for_extract_postgres', 'dag_id': 'load_csv_to_postgres', 'run_id': 'manual__2025-02-09T15:26:16.788035+00:00', 'map_index': -1, 'start_date': datetime.datetime(2025, 2, 9, 15, 26, 20, 616241, tzinfo=Timezone('UTC')), 'end_date': datetime.datetime(2025, 2, 9, 15, 32, 59, 985982, tzinfo=Timezone('UTC')), 'duration': 399}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+[2025-02-09T15:33:00.174+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=2214, status='terminated', exitcode=1, started='15:26:19') (2214) terminated with exit code 1

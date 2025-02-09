@@ -1,0 +1,20 @@
+version: 1
+default_environment: dev
+project_id: 55f2f6c1-ffb3-43e3-af4a-d6cb0dea15e6
+environments:
+- name: dev
+- name: staging
+- name: prod
+plugins:
+  extractors:
+  - name: tap-postgres
+    variant: meltanolabs
+    pip_url: git+https://github.com/MeltanoLabs/tap-postgres.git
+    config:
+      host: localhost
+      port: 5432
+      user: northwind_user
+      password: thewindisblowing
+      database: northwind
+      schema: public
+      

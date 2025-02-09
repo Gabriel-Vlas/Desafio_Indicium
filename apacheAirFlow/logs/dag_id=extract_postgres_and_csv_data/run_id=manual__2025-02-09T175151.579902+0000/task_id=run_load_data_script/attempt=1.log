@@ -1,0 +1,38 @@
+[2025-02-09T17:52:31.270+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-09T17:52:31.307+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: extract_postgres_and_csv_data.run_load_data_script manual__2025-02-09T17:51:51.579902+00:00 [queued]>
+[2025-02-09T17:52:31.329+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: extract_postgres_and_csv_data.run_load_data_script manual__2025-02-09T17:51:51.579902+00:00 [queued]>
+[2025-02-09T17:52:31.331+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-09T17:52:31.585+0000] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): run_load_data_script> on 2025-02-09 17:51:51.579902+00:00
+[2025-02-09T17:52:31.599+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=89) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-09T17:52:31.603+0000] {standard_task_runner.py:72} INFO - Started process 91 to run task
+[2025-02-09T17:52:31.605+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'extract_postgres_and_csv_data', 'run_load_data_script', 'manual__2025-02-09T17:51:51.579902+00:00', '--job-id', '214', '--raw', '--subdir', 'DAGS_FOLDER/extract_postgres_and_csv_data.py', '--cfg-path', '/tmp/tmpyj4iwd4t']
+[2025-02-09T17:52:31.608+0000] {standard_task_runner.py:105} INFO - Job 214: Subtask run_load_data_script
+[2025-02-09T17:52:31.743+0000] {task_command.py:467} INFO - Running <TaskInstance: extract_postgres_and_csv_data.run_load_data_script manual__2025-02-09T17:51:51.579902+00:00 [running]> on host 58bc83bc12fd
+[2025-02-09T17:52:31.995+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='extract_postgres_and_csv_data' AIRFLOW_CTX_TASK_ID='run_load_data_script' AIRFLOW_CTX_EXECUTION_DATE='2025-02-09T17:51:51.579902+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-09T17:51:51.579902+00:00'
+[2025-02-09T17:52:31.999+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-09T17:52:32.001+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-09T17:52:32.002+0000] {logging_mixin.py:190} INFO - Current task name:run_load_data_script state:running start_date:2025-02-09 17:52:31.308280+00:00
+[2025-02-09T17:52:32.003+0000] {logging_mixin.py:190} INFO - Dag name:extract_postgres_and_csv_data and current dag run status:running
+[2025-02-09T17:52:32.004+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-09T17:52:32.007+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-02-09T17:52:32.010+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/meltano/meltano_project/load/load_data_csv_for_db.py']
+[2025-02-09T17:52:32.042+0000] {subprocess.py:99} INFO - Output:
+[2025-02-09T17:52:36.611+0000] {subprocess.py:106} INFO - Conexão bem-sucedida ao banco de dados!
+[2025-02-09T17:52:36.612+0000] {subprocess.py:106} INFO - Tabela 'order_details' criada com sucesso!
+[2025-02-09T17:52:36.614+0000] {subprocess.py:106} INFO - Carregando dados do arquivo: /opt/***/meltano/data/csv/2025-02-09/order_details.csv
+[2025-02-09T17:52:36.615+0000] {subprocess.py:106} INFO - Conexão bem-sucedida ao banco de dados!
+[2025-02-09T17:52:36.616+0000] {subprocess.py:106} INFO - Dados inseridos com sucesso!
+[2025-02-09T17:52:36.617+0000] {subprocess.py:106} INFO - Conexão bem-sucedida ao banco de dados!
+[2025-02-09T17:52:36.618+0000] {subprocess.py:106} INFO - Erro ao buscar dados: No module named 'openpyxl'
+[2025-02-09T17:52:36.793+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-02-09T17:52:36.837+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-09T17:52:36.838+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=extract_postgres_and_csv_data, task_id=run_load_data_script, run_id=manual__2025-02-09T17:51:51.579902+00:00, execution_date=20250209T175151, start_date=20250209T175231, end_date=20250209T175236
+[2025-02-09T17:52:36.859+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-02-09T17:52:36.860+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-02-09T17:52:36.861+0000] {logging_mixin.py:190} INFO - Dag name:extract_postgres_and_csv_data queued_at:2025-02-09 17:51:51.626880+00:00
+[2025-02-09T17:52:36.862+0000] {logging_mixin.py:190} INFO - Task hostname:58bc83bc12fd operator:BashOperator
+[2025-02-09T17:52:36.910+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-09T17:52:36.937+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-09T17:52:36.940+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

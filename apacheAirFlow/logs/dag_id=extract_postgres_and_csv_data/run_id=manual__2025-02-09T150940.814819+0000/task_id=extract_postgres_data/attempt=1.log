@@ -1,0 +1,42 @@
+[2025-02-09T15:09:58.199+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-09T15:09:58.241+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: extract_postgres_and_csv_data.extract_postgres_data manual__2025-02-09T15:09:40.814819+00:00 [queued]>
+[2025-02-09T15:09:58.260+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: extract_postgres_and_csv_data.extract_postgres_data manual__2025-02-09T15:09:40.814819+00:00 [queued]>
+[2025-02-09T15:09:58.261+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-09T15:09:58.547+0000] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): extract_postgres_data> on 2025-02-09 15:09:40.814819+00:00
+[2025-02-09T15:09:58.559+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1948) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-09T15:09:58.562+0000] {standard_task_runner.py:72} INFO - Started process 1950 to run task
+[2025-02-09T15:09:58.562+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'extract_postgres_and_csv_data', 'extract_postgres_data', 'manual__2025-02-09T15:09:40.814819+00:00', '--job-id', '127', '--raw', '--subdir', 'DAGS_FOLDER/extract_postgres_and_csv_data.py', '--cfg-path', '/tmp/tmp7322h29q']
+[2025-02-09T15:09:58.565+0000] {standard_task_runner.py:105} INFO - Job 127: Subtask extract_postgres_data
+[2025-02-09T15:09:58.641+0000] {task_command.py:467} INFO - Running <TaskInstance: extract_postgres_and_csv_data.extract_postgres_data manual__2025-02-09T15:09:40.814819+00:00 [running]> on host 8c410daec8d3
+[2025-02-09T15:09:58.779+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='extract_postgres_and_csv_data' AIRFLOW_CTX_TASK_ID='extract_postgres_data' AIRFLOW_CTX_EXECUTION_DATE='2025-02-09T15:09:40.814819+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-09T15:09:40.814819+00:00'
+[2025-02-09T15:09:58.781+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-09T15:09:58.782+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-09T15:09:58.783+0000] {logging_mixin.py:190} INFO - Current task name:extract_postgres_data state:running start_date:2025-02-09 15:09:58.242149+00:00
+[2025-02-09T15:09:58.784+0000] {logging_mixin.py:190} INFO - Dag name:extract_postgres_and_csv_data and current dag run status:running
+[2025-02-09T15:09:58.785+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-09T15:09:58.786+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-02-09T15:09:58.788+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/meltano/meltano_project/extract/extract_data_db.py']
+[2025-02-09T15:09:58.808+0000] {subprocess.py:99} INFO - Output:
+[2025-02-09T15:10:00.809+0000] {subprocess.py:106} INFO - ✅ Dados extraídos: /opt/***/meltano/data/postgres/categories/2025-02-09/categories.csv
+[2025-02-09T15:10:00.810+0000] {subprocess.py:106} INFO - ✅ Dados extraídos: /opt/***/meltano/data/postgres/products/2025-02-09/products.csv
+[2025-02-09T15:10:00.812+0000] {subprocess.py:106} INFO - ✅ Dados extraídos: /opt/***/meltano/data/postgres/suppliers/2025-02-09/suppliers.csv
+[2025-02-09T15:10:00.813+0000] {subprocess.py:106} INFO - ✅ Dados extraídos: /opt/***/meltano/data/postgres/employees/2025-02-09/employees.csv
+[2025-02-09T15:10:00.815+0000] {subprocess.py:106} INFO - ✅ Dados extraídos: /opt/***/meltano/data/postgres/employee_territories/2025-02-09/employee_territories.csv
+[2025-02-09T15:10:00.816+0000] {subprocess.py:106} INFO - ✅ Dados extraídos: /opt/***/meltano/data/postgres/territories/2025-02-09/territories.csv
+[2025-02-09T15:10:00.817+0000] {subprocess.py:106} INFO - ✅ Dados extraídos: /opt/***/meltano/data/postgres/region/2025-02-09/region.csv
+[2025-02-09T15:10:00.819+0000] {subprocess.py:106} INFO - ✅ Dados extraídos: /opt/***/meltano/data/postgres/orders/2025-02-09/orders.csv
+[2025-02-09T15:10:00.820+0000] {subprocess.py:106} INFO - ✅ Dados extraídos: /opt/***/meltano/data/postgres/shippers/2025-02-09/shippers.csv
+[2025-02-09T15:10:00.821+0000] {subprocess.py:106} INFO - ✅ Dados extraídos: /opt/***/meltano/data/postgres/us_states/2025-02-09/us_states.csv
+[2025-02-09T15:10:00.822+0000] {subprocess.py:106} INFO - ✅ Dados extraídos: /opt/***/meltano/data/postgres/customer_customer_demo/2025-02-09/customer_customer_demo.csv
+[2025-02-09T15:10:00.826+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-02-09T15:10:00.871+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-09T15:10:00.872+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=extract_postgres_and_csv_data, task_id=extract_postgres_data, run_id=manual__2025-02-09T15:09:40.814819+00:00, execution_date=20250209T150940, start_date=20250209T150958, end_date=20250209T151000
+[2025-02-09T15:10:00.897+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-02-09T15:10:00.898+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-02-09T15:10:00.899+0000] {logging_mixin.py:190} INFO - Dag name:extract_postgres_and_csv_data queued_at:2025-02-09 15:09:40.871172+00:00
+[2025-02-09T15:10:00.900+0000] {logging_mixin.py:190} INFO - Task hostname:8c410daec8d3 operator:BashOperator
+[2025-02-09T15:10:00.937+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-09T15:10:00.981+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-02-09T15:10:00.984+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

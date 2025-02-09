@@ -1,0 +1,418 @@
+[2025-02-09T14:25:32.211+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-09T14:25:32.242+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Load_CSV_to_Postgres.wait_for_extract manual__2025-02-09T14:25:22.438682+00:00 [queued]>
+[2025-02-09T14:25:32.258+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Load_CSV_to_Postgres.wait_for_extract manual__2025-02-09T14:25:22.438682+00:00 [queued]>
+[2025-02-09T14:25:32.263+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-09T14:25:32.293+0000] {taskinstance.py:2889} INFO - Executing <Task(ExternalTaskSensor): wait_for_extract> on 2025-02-09 14:25:22.438682+00:00
+[2025-02-09T14:25:32.307+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1248) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-09T14:25:32.311+0000] {standard_task_runner.py:72} INFO - Started process 1251 to run task
+[2025-02-09T14:25:32.312+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Load_CSV_to_Postgres', 'wait_for_extract', 'manual__2025-02-09T14:25:22.438682+00:00', '--job-id', '96', '--raw', '--subdir', 'DAGS_FOLDER/Load_CSV_to_Postgres.py', '--cfg-path', '/tmp/tmp6qjboady']
+[2025-02-09T14:25:32.314+0000] {standard_task_runner.py:105} INFO - Job 96: Subtask wait_for_extract
+[2025-02-09T14:25:33.592+0000] {task_command.py:467} INFO - Running <TaskInstance: Load_CSV_to_Postgres.wait_for_extract manual__2025-02-09T14:25:22.438682+00:00 [running]> on host 8c410daec8d3
+[2025-02-09T14:25:33.840+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Load_CSV_to_Postgres' AIRFLOW_CTX_TASK_ID='wait_for_extract' AIRFLOW_CTX_EXECUTION_DATE='2025-02-09T14:25:22.438682+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-09T14:25:22.438682+00:00'
+[2025-02-09T14:25:33.843+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-09T14:25:33.844+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-09T14:25:33.845+0000] {logging_mixin.py:190} INFO - Current task name:wait_for_extract state:running start_date:2025-02-09 14:25:32.243612+00:00
+[2025-02-09T14:25:33.846+0000] {logging_mixin.py:190} INFO - Dag name:Load_CSV_to_Postgres and current dag run status:running
+[2025-02-09T14:25:33.848+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-09T14:25:33.849+0000] {baseoperator.py:421} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-02-09T14:25:33.895+0000] {external_task.py:258} INFO - Poking for tasks ['extract_postgres_data'] in dag extract_postgres_and_csv_data on 2025-02-09T14:25:22.438682+00:00 ... 
+[2025-02-09T14:25:33.898+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:97: DeprecationWarning: This method is deprecated and will be removed in future.
+  return func(*args, session=session, **kwargs)
+
+[2025-02-09T14:25:34.057+0000] {taskinstance.py:309} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-02-09T14:25:34.074+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-09T14:25:34.231+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-09T14:25:34.271+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-02-09T14:26:37.667+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-09T14:26:37.696+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Load_CSV_to_Postgres.wait_for_extract manual__2025-02-09T14:25:22.438682+00:00 [queued]>
+[2025-02-09T14:26:37.709+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Load_CSV_to_Postgres.wait_for_extract manual__2025-02-09T14:25:22.438682+00:00 [queued]>
+[2025-02-09T14:26:37.711+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-09T14:26:37.737+0000] {taskinstance.py:2889} INFO - Executing <Task(ExternalTaskSensor): wait_for_extract> on 2025-02-09 14:25:22.438682+00:00
+[2025-02-09T14:26:37.748+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1273) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-09T14:26:37.750+0000] {standard_task_runner.py:72} INFO - Started process 1275 to run task
+[2025-02-09T14:26:37.751+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Load_CSV_to_Postgres', 'wait_for_extract', 'manual__2025-02-09T14:25:22.438682+00:00', '--job-id', '98', '--raw', '--subdir', 'DAGS_FOLDER/Load_CSV_to_Postgres.py', '--cfg-path', '/tmp/tmpcysb5st0']
+[2025-02-09T14:26:37.753+0000] {standard_task_runner.py:105} INFO - Job 98: Subtask wait_for_extract
+[2025-02-09T14:26:38.262+0000] {task_command.py:467} INFO - Running <TaskInstance: Load_CSV_to_Postgres.wait_for_extract manual__2025-02-09T14:25:22.438682+00:00 [running]> on host 8c410daec8d3
+[2025-02-09T14:26:38.372+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Load_CSV_to_Postgres' AIRFLOW_CTX_TASK_ID='wait_for_extract' AIRFLOW_CTX_EXECUTION_DATE='2025-02-09T14:25:22.438682+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-09T14:25:22.438682+00:00'
+[2025-02-09T14:26:38.374+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-09T14:26:38.375+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-09T14:26:38.375+0000] {logging_mixin.py:190} INFO - Current task name:wait_for_extract state:running start_date:2025-02-09 14:26:37.697361+00:00
+[2025-02-09T14:26:38.376+0000] {logging_mixin.py:190} INFO - Dag name:Load_CSV_to_Postgres and current dag run status:running
+[2025-02-09T14:26:38.377+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-09T14:26:38.378+0000] {baseoperator.py:421} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-02-09T14:26:38.391+0000] {external_task.py:258} INFO - Poking for tasks ['extract_postgres_data'] in dag extract_postgres_and_csv_data on 2025-02-09T14:25:22.438682+00:00 ... 
+[2025-02-09T14:26:38.392+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:97: DeprecationWarning: This method is deprecated and will be removed in future.
+  return func(*args, session=session, **kwargs)
+
+[2025-02-09T14:26:38.440+0000] {taskinstance.py:309} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-02-09T14:26:38.441+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-09T14:26:38.495+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-09T14:26:38.766+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-09T14:26:38.775+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-02-09T14:27:40.992+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-09T14:27:41.018+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Load_CSV_to_Postgres.wait_for_extract manual__2025-02-09T14:25:22.438682+00:00 [queued]>
+[2025-02-09T14:27:41.030+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Load_CSV_to_Postgres.wait_for_extract manual__2025-02-09T14:25:22.438682+00:00 [queued]>
+[2025-02-09T14:27:41.031+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-09T14:27:41.053+0000] {taskinstance.py:2889} INFO - Executing <Task(ExternalTaskSensor): wait_for_extract> on 2025-02-09 14:25:22.438682+00:00
+[2025-02-09T14:27:41.062+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1291) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-09T14:27:41.065+0000] {standard_task_runner.py:72} INFO - Started process 1293 to run task
+[2025-02-09T14:27:41.065+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Load_CSV_to_Postgres', 'wait_for_extract', 'manual__2025-02-09T14:25:22.438682+00:00', '--job-id', '99', '--raw', '--subdir', 'DAGS_FOLDER/Load_CSV_to_Postgres.py', '--cfg-path', '/tmp/tmpncfillyu']
+[2025-02-09T14:27:41.067+0000] {standard_task_runner.py:105} INFO - Job 99: Subtask wait_for_extract
+[2025-02-09T14:27:41.409+0000] {task_command.py:467} INFO - Running <TaskInstance: Load_CSV_to_Postgres.wait_for_extract manual__2025-02-09T14:25:22.438682+00:00 [running]> on host 8c410daec8d3
+[2025-02-09T14:27:41.518+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Load_CSV_to_Postgres' AIRFLOW_CTX_TASK_ID='wait_for_extract' AIRFLOW_CTX_EXECUTION_DATE='2025-02-09T14:25:22.438682+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-09T14:25:22.438682+00:00'
+[2025-02-09T14:27:41.519+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-09T14:27:41.520+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-09T14:27:41.521+0000] {logging_mixin.py:190} INFO - Current task name:wait_for_extract state:running start_date:2025-02-09 14:27:41.019399+00:00
+[2025-02-09T14:27:41.522+0000] {logging_mixin.py:190} INFO - Dag name:Load_CSV_to_Postgres and current dag run status:running
+[2025-02-09T14:27:41.523+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-09T14:27:41.524+0000] {baseoperator.py:421} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-02-09T14:27:41.537+0000] {external_task.py:258} INFO - Poking for tasks ['extract_postgres_data'] in dag extract_postgres_and_csv_data on 2025-02-09T14:25:22.438682+00:00 ... 
+[2025-02-09T14:27:41.538+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:97: DeprecationWarning: This method is deprecated and will be removed in future.
+  return func(*args, session=session, **kwargs)
+
+[2025-02-09T14:27:41.582+0000] {taskinstance.py:309} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-02-09T14:27:41.583+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-09T14:27:41.612+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-09T14:27:41.827+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-09T14:27:41.840+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-02-09T14:28:44.247+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-09T14:28:44.268+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Load_CSV_to_Postgres.wait_for_extract manual__2025-02-09T14:25:22.438682+00:00 [queued]>
+[2025-02-09T14:28:44.278+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Load_CSV_to_Postgres.wait_for_extract manual__2025-02-09T14:25:22.438682+00:00 [queued]>
+[2025-02-09T14:28:44.278+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-09T14:28:44.296+0000] {taskinstance.py:2889} INFO - Executing <Task(ExternalTaskSensor): wait_for_extract> on 2025-02-09 14:25:22.438682+00:00
+[2025-02-09T14:28:44.304+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1308) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-09T14:28:44.306+0000] {standard_task_runner.py:72} INFO - Started process 1310 to run task
+[2025-02-09T14:28:44.307+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Load_CSV_to_Postgres', 'wait_for_extract', 'manual__2025-02-09T14:25:22.438682+00:00', '--job-id', '100', '--raw', '--subdir', 'DAGS_FOLDER/Load_CSV_to_Postgres.py', '--cfg-path', '/tmp/tmpvbasqfyv']
+[2025-02-09T14:28:44.309+0000] {standard_task_runner.py:105} INFO - Job 100: Subtask wait_for_extract
+[2025-02-09T14:28:44.665+0000] {task_command.py:467} INFO - Running <TaskInstance: Load_CSV_to_Postgres.wait_for_extract manual__2025-02-09T14:25:22.438682+00:00 [running]> on host 8c410daec8d3
+[2025-02-09T14:28:44.790+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Load_CSV_to_Postgres' AIRFLOW_CTX_TASK_ID='wait_for_extract' AIRFLOW_CTX_EXECUTION_DATE='2025-02-09T14:25:22.438682+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-09T14:25:22.438682+00:00'
+[2025-02-09T14:28:44.792+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-09T14:28:44.792+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-09T14:28:44.793+0000] {logging_mixin.py:190} INFO - Current task name:wait_for_extract state:running start_date:2025-02-09 14:28:44.269384+00:00
+[2025-02-09T14:28:44.794+0000] {logging_mixin.py:190} INFO - Dag name:Load_CSV_to_Postgres and current dag run status:running
+[2025-02-09T14:28:44.795+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-09T14:28:44.796+0000] {baseoperator.py:421} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-02-09T14:28:44.811+0000] {external_task.py:258} INFO - Poking for tasks ['extract_postgres_data'] in dag extract_postgres_and_csv_data on 2025-02-09T14:25:22.438682+00:00 ... 
+[2025-02-09T14:28:44.813+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:97: DeprecationWarning: This method is deprecated and will be removed in future.
+  return func(*args, session=session, **kwargs)
+
+[2025-02-09T14:28:44.866+0000] {taskinstance.py:309} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-02-09T14:28:44.867+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-09T14:28:44.930+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-09T14:28:45.292+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-09T14:28:45.301+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-02-09T14:29:47.549+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-09T14:29:47.571+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Load_CSV_to_Postgres.wait_for_extract manual__2025-02-09T14:25:22.438682+00:00 [queued]>
+[2025-02-09T14:29:47.583+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Load_CSV_to_Postgres.wait_for_extract manual__2025-02-09T14:25:22.438682+00:00 [queued]>
+[2025-02-09T14:29:47.584+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-09T14:29:47.605+0000] {taskinstance.py:2889} INFO - Executing <Task(ExternalTaskSensor): wait_for_extract> on 2025-02-09 14:25:22.438682+00:00
+[2025-02-09T14:29:47.614+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1326) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-09T14:29:47.617+0000] {standard_task_runner.py:72} INFO - Started process 1328 to run task
+[2025-02-09T14:29:47.617+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Load_CSV_to_Postgres', 'wait_for_extract', 'manual__2025-02-09T14:25:22.438682+00:00', '--job-id', '101', '--raw', '--subdir', 'DAGS_FOLDER/Load_CSV_to_Postgres.py', '--cfg-path', '/tmp/tmphj2bpxxn']
+[2025-02-09T14:29:47.619+0000] {standard_task_runner.py:105} INFO - Job 101: Subtask wait_for_extract
+[2025-02-09T14:29:48.038+0000] {task_command.py:467} INFO - Running <TaskInstance: Load_CSV_to_Postgres.wait_for_extract manual__2025-02-09T14:25:22.438682+00:00 [running]> on host 8c410daec8d3
+[2025-02-09T14:29:48.184+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Load_CSV_to_Postgres' AIRFLOW_CTX_TASK_ID='wait_for_extract' AIRFLOW_CTX_EXECUTION_DATE='2025-02-09T14:25:22.438682+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-09T14:25:22.438682+00:00'
+[2025-02-09T14:29:48.186+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-09T14:29:48.187+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-09T14:29:48.188+0000] {logging_mixin.py:190} INFO - Current task name:wait_for_extract state:running start_date:2025-02-09 14:29:47.572997+00:00
+[2025-02-09T14:29:48.189+0000] {logging_mixin.py:190} INFO - Dag name:Load_CSV_to_Postgres and current dag run status:running
+[2025-02-09T14:29:48.190+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-09T14:29:48.191+0000] {baseoperator.py:421} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-02-09T14:29:48.206+0000] {external_task.py:258} INFO - Poking for tasks ['extract_postgres_data'] in dag extract_postgres_and_csv_data on 2025-02-09T14:25:22.438682+00:00 ... 
+[2025-02-09T14:29:48.208+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:97: DeprecationWarning: This method is deprecated and will be removed in future.
+  return func(*args, session=session, **kwargs)
+
+[2025-02-09T14:29:48.260+0000] {taskinstance.py:309} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-02-09T14:29:48.260+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-09T14:29:48.285+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-09T14:29:48.577+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-09T14:29:48.586+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-02-09T14:30:52.962+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-09T14:30:52.989+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Load_CSV_to_Postgres.wait_for_extract manual__2025-02-09T14:25:22.438682+00:00 [queued]>
+[2025-02-09T14:30:53.001+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Load_CSV_to_Postgres.wait_for_extract manual__2025-02-09T14:25:22.438682+00:00 [queued]>
+[2025-02-09T14:30:53.001+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-09T14:30:52.626+0000] {taskinstance.py:2889} INFO - Executing <Task(ExternalTaskSensor): wait_for_extract> on 2025-02-09 14:25:22.438682+00:00
+[2025-02-09T14:30:52.634+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1349) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-09T14:30:52.637+0000] {standard_task_runner.py:72} INFO - Started process 1351 to run task
+[2025-02-09T14:30:52.639+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Load_CSV_to_Postgres', 'wait_for_extract', 'manual__2025-02-09T14:25:22.438682+00:00', '--job-id', '103', '--raw', '--subdir', 'DAGS_FOLDER/Load_CSV_to_Postgres.py', '--cfg-path', '/tmp/tmp1e701g7y']
+[2025-02-09T14:30:52.641+0000] {standard_task_runner.py:105} INFO - Job 103: Subtask wait_for_extract
+[2025-02-09T14:30:52.796+0000] {task_command.py:467} INFO - Running <TaskInstance: Load_CSV_to_Postgres.wait_for_extract manual__2025-02-09T14:25:22.438682+00:00 [running]> on host 8c410daec8d3
+[2025-02-09T14:30:53.230+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Load_CSV_to_Postgres' AIRFLOW_CTX_TASK_ID='wait_for_extract' AIRFLOW_CTX_EXECUTION_DATE='2025-02-09T14:25:22.438682+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-09T14:25:22.438682+00:00'
+[2025-02-09T14:30:53.232+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-09T14:30:53.233+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-09T14:30:53.234+0000] {logging_mixin.py:190} INFO - Current task name:wait_for_extract state:running start_date:2025-02-09 14:30:52.990107+00:00
+[2025-02-09T14:30:53.235+0000] {logging_mixin.py:190} INFO - Dag name:Load_CSV_to_Postgres and current dag run status:running
+[2025-02-09T14:30:53.236+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-09T14:30:53.237+0000] {baseoperator.py:421} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-02-09T14:30:53.257+0000] {external_task.py:258} INFO - Poking for tasks ['extract_postgres_data'] in dag extract_postgres_and_csv_data on 2025-02-09T14:25:22.438682+00:00 ... 
+[2025-02-09T14:30:53.259+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:97: DeprecationWarning: This method is deprecated and will be removed in future.
+  return func(*args, session=session, **kwargs)
+
+[2025-02-09T14:30:53.431+0000] {taskinstance.py:309} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-02-09T14:30:53.432+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-09T14:30:53.478+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-09T14:30:53.974+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-09T14:30:54.143+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-02-09T14:31:57.206+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-09T14:31:57.263+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Load_CSV_to_Postgres.wait_for_extract manual__2025-02-09T14:25:22.438682+00:00 [queued]>
+[2025-02-09T14:31:57.287+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Load_CSV_to_Postgres.wait_for_extract manual__2025-02-09T14:25:22.438682+00:00 [queued]>
+[2025-02-09T14:31:57.288+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-09T14:31:57.330+0000] {taskinstance.py:2889} INFO - Executing <Task(ExternalTaskSensor): wait_for_extract> on 2025-02-09 14:25:22.438682+00:00
+[2025-02-09T14:31:57.343+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1367) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-09T14:31:57.347+0000] {standard_task_runner.py:72} INFO - Started process 1369 to run task
+[2025-02-09T14:31:57.349+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Load_CSV_to_Postgres', 'wait_for_extract', 'manual__2025-02-09T14:25:22.438682+00:00', '--job-id', '104', '--raw', '--subdir', 'DAGS_FOLDER/Load_CSV_to_Postgres.py', '--cfg-path', '/tmp/tmp51pso89v']
+[2025-02-09T14:31:57.353+0000] {standard_task_runner.py:105} INFO - Job 104: Subtask wait_for_extract
+[2025-02-09T14:31:57.966+0000] {task_command.py:467} INFO - Running <TaskInstance: Load_CSV_to_Postgres.wait_for_extract manual__2025-02-09T14:25:22.438682+00:00 [running]> on host 8c410daec8d3
+[2025-02-09T14:31:58.170+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Load_CSV_to_Postgres' AIRFLOW_CTX_TASK_ID='wait_for_extract' AIRFLOW_CTX_EXECUTION_DATE='2025-02-09T14:25:22.438682+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-09T14:25:22.438682+00:00'
+[2025-02-09T14:31:58.173+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-09T14:31:58.174+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-09T14:31:58.176+0000] {logging_mixin.py:190} INFO - Current task name:wait_for_extract state:running start_date:2025-02-09 14:31:57.265154+00:00
+[2025-02-09T14:31:58.177+0000] {logging_mixin.py:190} INFO - Dag name:Load_CSV_to_Postgres and current dag run status:running
+[2025-02-09T14:31:58.178+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-09T14:31:58.179+0000] {baseoperator.py:421} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-02-09T14:31:58.202+0000] {external_task.py:258} INFO - Poking for tasks ['extract_postgres_data'] in dag extract_postgres_and_csv_data on 2025-02-09T14:25:22.438682+00:00 ... 
+[2025-02-09T14:31:58.209+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:97: DeprecationWarning: This method is deprecated and will be removed in future.
+  return func(*args, session=session, **kwargs)
+
+[2025-02-09T14:31:58.278+0000] {taskinstance.py:309} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-02-09T14:31:58.279+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-09T14:31:58.338+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-09T14:31:58.861+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-09T14:31:58.866+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-02-09T14:33:00.765+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-09T14:33:00.806+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Load_CSV_to_Postgres.wait_for_extract manual__2025-02-09T14:25:22.438682+00:00 [queued]>
+[2025-02-09T14:33:00.821+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Load_CSV_to_Postgres.wait_for_extract manual__2025-02-09T14:25:22.438682+00:00 [queued]>
+[2025-02-09T14:33:00.822+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-09T14:33:00.850+0000] {taskinstance.py:2889} INFO - Executing <Task(ExternalTaskSensor): wait_for_extract> on 2025-02-09 14:25:22.438682+00:00
+[2025-02-09T14:33:00.864+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1378) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-09T14:33:00.868+0000] {standard_task_runner.py:72} INFO - Started process 1380 to run task
+[2025-02-09T14:33:00.869+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Load_CSV_to_Postgres', 'wait_for_extract', 'manual__2025-02-09T14:25:22.438682+00:00', '--job-id', '105', '--raw', '--subdir', 'DAGS_FOLDER/Load_CSV_to_Postgres.py', '--cfg-path', '/tmp/tmpfyslorx0']
+[2025-02-09T14:33:00.872+0000] {standard_task_runner.py:105} INFO - Job 105: Subtask wait_for_extract
+[2025-02-09T14:33:01.490+0000] {task_command.py:467} INFO - Running <TaskInstance: Load_CSV_to_Postgres.wait_for_extract manual__2025-02-09T14:25:22.438682+00:00 [running]> on host 8c410daec8d3
+[2025-02-09T14:33:01.659+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Load_CSV_to_Postgres' AIRFLOW_CTX_TASK_ID='wait_for_extract' AIRFLOW_CTX_EXECUTION_DATE='2025-02-09T14:25:22.438682+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-09T14:25:22.438682+00:00'
+[2025-02-09T14:33:01.661+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-09T14:33:01.662+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-09T14:33:01.663+0000] {logging_mixin.py:190} INFO - Current task name:wait_for_extract state:running start_date:2025-02-09 14:33:00.807182+00:00
+[2025-02-09T14:33:01.664+0000] {logging_mixin.py:190} INFO - Dag name:Load_CSV_to_Postgres and current dag run status:running
+[2025-02-09T14:33:01.665+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-09T14:33:01.666+0000] {baseoperator.py:421} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-02-09T14:33:01.680+0000] {external_task.py:258} INFO - Poking for tasks ['extract_postgres_data'] in dag extract_postgres_and_csv_data on 2025-02-09T14:25:22.438682+00:00 ... 
+[2025-02-09T14:33:01.682+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:97: DeprecationWarning: This method is deprecated and will be removed in future.
+  return func(*args, session=session, **kwargs)
+
+[2025-02-09T14:33:01.735+0000] {taskinstance.py:309} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-02-09T14:33:01.736+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-09T14:33:01.775+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-09T14:33:02.057+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-09T14:33:02.067+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-02-09T14:34:04.523+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-09T14:34:04.549+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Load_CSV_to_Postgres.wait_for_extract manual__2025-02-09T14:25:22.438682+00:00 [queued]>
+[2025-02-09T14:34:04.561+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Load_CSV_to_Postgres.wait_for_extract manual__2025-02-09T14:25:22.438682+00:00 [queued]>
+[2025-02-09T14:34:04.562+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-09T14:34:04.586+0000] {taskinstance.py:2889} INFO - Executing <Task(ExternalTaskSensor): wait_for_extract> on 2025-02-09 14:25:22.438682+00:00
+[2025-02-09T14:34:04.596+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1401) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-09T14:34:04.598+0000] {standard_task_runner.py:72} INFO - Started process 1403 to run task
+[2025-02-09T14:34:04.599+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Load_CSV_to_Postgres', 'wait_for_extract', 'manual__2025-02-09T14:25:22.438682+00:00', '--job-id', '107', '--raw', '--subdir', 'DAGS_FOLDER/Load_CSV_to_Postgres.py', '--cfg-path', '/tmp/tmpc8l9p4jt']
+[2025-02-09T14:34:04.601+0000] {standard_task_runner.py:105} INFO - Job 107: Subtask wait_for_extract
+[2025-02-09T14:34:04.973+0000] {task_command.py:467} INFO - Running <TaskInstance: Load_CSV_to_Postgres.wait_for_extract manual__2025-02-09T14:25:22.438682+00:00 [running]> on host 8c410daec8d3
+[2025-02-09T14:34:05.083+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Load_CSV_to_Postgres' AIRFLOW_CTX_TASK_ID='wait_for_extract' AIRFLOW_CTX_EXECUTION_DATE='2025-02-09T14:25:22.438682+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-09T14:25:22.438682+00:00'
+[2025-02-09T14:34:05.085+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-09T14:34:05.085+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-09T14:34:05.086+0000] {logging_mixin.py:190} INFO - Current task name:wait_for_extract state:running start_date:2025-02-09 14:34:04.550203+00:00
+[2025-02-09T14:34:05.087+0000] {logging_mixin.py:190} INFO - Dag name:Load_CSV_to_Postgres and current dag run status:running
+[2025-02-09T14:34:05.088+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-09T14:34:05.089+0000] {baseoperator.py:421} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-02-09T14:34:05.102+0000] {external_task.py:258} INFO - Poking for tasks ['extract_postgres_data'] in dag extract_postgres_and_csv_data on 2025-02-09T14:25:22.438682+00:00 ... 
+[2025-02-09T14:34:05.104+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:97: DeprecationWarning: This method is deprecated and will be removed in future.
+  return func(*args, session=session, **kwargs)
+
+[2025-02-09T14:34:05.154+0000] {taskinstance.py:309} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-02-09T14:34:05.155+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-09T14:34:05.188+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-09T14:34:05.446+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-09T14:34:05.450+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-02-09T14:35:08.559+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-09T14:35:08.581+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Load_CSV_to_Postgres.wait_for_extract manual__2025-02-09T14:25:22.438682+00:00 [queued]>
+[2025-02-09T14:35:08.592+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Load_CSV_to_Postgres.wait_for_extract manual__2025-02-09T14:25:22.438682+00:00 [queued]>
+[2025-02-09T14:35:08.593+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-09T14:35:08.613+0000] {taskinstance.py:2889} INFO - Executing <Task(ExternalTaskSensor): wait_for_extract> on 2025-02-09 14:25:22.438682+00:00
+[2025-02-09T14:35:08.623+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1424) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-09T14:35:08.625+0000] {standard_task_runner.py:72} INFO - Started process 1426 to run task
+[2025-02-09T14:35:08.626+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Load_CSV_to_Postgres', 'wait_for_extract', 'manual__2025-02-09T14:25:22.438682+00:00', '--job-id', '109', '--raw', '--subdir', 'DAGS_FOLDER/Load_CSV_to_Postgres.py', '--cfg-path', '/tmp/tmprq6gdkdk']
+[2025-02-09T14:35:08.627+0000] {standard_task_runner.py:105} INFO - Job 109: Subtask wait_for_extract
+[2025-02-09T14:35:08.982+0000] {task_command.py:467} INFO - Running <TaskInstance: Load_CSV_to_Postgres.wait_for_extract manual__2025-02-09T14:25:22.438682+00:00 [running]> on host 8c410daec8d3
+[2025-02-09T14:35:09.101+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Load_CSV_to_Postgres' AIRFLOW_CTX_TASK_ID='wait_for_extract' AIRFLOW_CTX_EXECUTION_DATE='2025-02-09T14:25:22.438682+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-09T14:25:22.438682+00:00'
+[2025-02-09T14:35:09.103+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-09T14:35:09.103+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-09T14:35:09.104+0000] {logging_mixin.py:190} INFO - Current task name:wait_for_extract state:running start_date:2025-02-09 14:35:08.583286+00:00
+[2025-02-09T14:35:09.105+0000] {logging_mixin.py:190} INFO - Dag name:Load_CSV_to_Postgres and current dag run status:running
+[2025-02-09T14:35:09.106+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-09T14:35:09.107+0000] {baseoperator.py:421} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-02-09T14:35:09.119+0000] {external_task.py:258} INFO - Poking for tasks ['extract_postgres_data'] in dag extract_postgres_and_csv_data on 2025-02-09T14:25:22.438682+00:00 ... 
+[2025-02-09T14:35:09.121+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:97: DeprecationWarning: This method is deprecated and will be removed in future.
+  return func(*args, session=session, **kwargs)
+
+[2025-02-09T14:35:09.174+0000] {taskinstance.py:309} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-02-09T14:35:09.176+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-09T14:35:09.212+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-09T14:35:09.467+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-09T14:35:09.471+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-02-09T14:36:11.601+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-09T14:36:11.628+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Load_CSV_to_Postgres.wait_for_extract manual__2025-02-09T14:25:22.438682+00:00 [queued]>
+[2025-02-09T14:36:11.639+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Load_CSV_to_Postgres.wait_for_extract manual__2025-02-09T14:25:22.438682+00:00 [queued]>
+[2025-02-09T14:36:11.640+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-09T14:36:11.660+0000] {taskinstance.py:2889} INFO - Executing <Task(ExternalTaskSensor): wait_for_extract> on 2025-02-09 14:25:22.438682+00:00
+[2025-02-09T14:36:11.669+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1446) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-09T14:36:11.672+0000] {standard_task_runner.py:72} INFO - Started process 1448 to run task
+[2025-02-09T14:36:11.672+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Load_CSV_to_Postgres', 'wait_for_extract', 'manual__2025-02-09T14:25:22.438682+00:00', '--job-id', '111', '--raw', '--subdir', 'DAGS_FOLDER/Load_CSV_to_Postgres.py', '--cfg-path', '/tmp/tmp26skm90k']
+[2025-02-09T14:36:11.673+0000] {standard_task_runner.py:105} INFO - Job 111: Subtask wait_for_extract
+[2025-02-09T14:36:12.062+0000] {task_command.py:467} INFO - Running <TaskInstance: Load_CSV_to_Postgres.wait_for_extract manual__2025-02-09T14:25:22.438682+00:00 [running]> on host 8c410daec8d3
+[2025-02-09T14:36:12.166+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Load_CSV_to_Postgres' AIRFLOW_CTX_TASK_ID='wait_for_extract' AIRFLOW_CTX_EXECUTION_DATE='2025-02-09T14:25:22.438682+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-09T14:25:22.438682+00:00'
+[2025-02-09T14:36:12.168+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-09T14:36:12.168+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-09T14:36:12.169+0000] {logging_mixin.py:190} INFO - Current task name:wait_for_extract state:running start_date:2025-02-09 14:36:11.629424+00:00
+[2025-02-09T14:36:12.170+0000] {logging_mixin.py:190} INFO - Dag name:Load_CSV_to_Postgres and current dag run status:running
+[2025-02-09T14:36:12.170+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-09T14:36:12.171+0000] {baseoperator.py:421} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-02-09T14:36:12.182+0000] {external_task.py:258} INFO - Poking for tasks ['extract_postgres_data'] in dag extract_postgres_and_csv_data on 2025-02-09T14:25:22.438682+00:00 ... 
+[2025-02-09T14:36:12.184+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:97: DeprecationWarning: This method is deprecated and will be removed in future.
+  return func(*args, session=session, **kwargs)
+
+[2025-02-09T14:36:12.229+0000] {taskinstance.py:309} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-02-09T14:36:12.229+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-09T14:36:12.252+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-09T14:36:12.524+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-09T14:36:12.527+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-02-09T14:37:14.988+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-09T14:37:15.009+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Load_CSV_to_Postgres.wait_for_extract manual__2025-02-09T14:25:22.438682+00:00 [queued]>
+[2025-02-09T14:37:15.020+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Load_CSV_to_Postgres.wait_for_extract manual__2025-02-09T14:25:22.438682+00:00 [queued]>
+[2025-02-09T14:37:15.021+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-09T14:37:15.040+0000] {taskinstance.py:2889} INFO - Executing <Task(ExternalTaskSensor): wait_for_extract> on 2025-02-09 14:25:22.438682+00:00
+[2025-02-09T14:37:15.049+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1468) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-09T14:37:15.052+0000] {standard_task_runner.py:72} INFO - Started process 1470 to run task
+[2025-02-09T14:37:15.051+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Load_CSV_to_Postgres', 'wait_for_extract', 'manual__2025-02-09T14:25:22.438682+00:00', '--job-id', '113', '--raw', '--subdir', 'DAGS_FOLDER/Load_CSV_to_Postgres.py', '--cfg-path', '/tmp/tmp2arl1p3n']
+[2025-02-09T14:37:15.053+0000] {standard_task_runner.py:105} INFO - Job 113: Subtask wait_for_extract
+[2025-02-09T14:37:15.466+0000] {task_command.py:467} INFO - Running <TaskInstance: Load_CSV_to_Postgres.wait_for_extract manual__2025-02-09T14:25:22.438682+00:00 [running]> on host 8c410daec8d3
+[2025-02-09T14:37:15.576+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Load_CSV_to_Postgres' AIRFLOW_CTX_TASK_ID='wait_for_extract' AIRFLOW_CTX_EXECUTION_DATE='2025-02-09T14:25:22.438682+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-09T14:25:22.438682+00:00'
+[2025-02-09T14:37:15.578+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-09T14:37:15.578+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-09T14:37:15.579+0000] {logging_mixin.py:190} INFO - Current task name:wait_for_extract state:running start_date:2025-02-09 14:37:15.010972+00:00
+[2025-02-09T14:37:15.580+0000] {logging_mixin.py:190} INFO - Dag name:Load_CSV_to_Postgres and current dag run status:running
+[2025-02-09T14:37:15.581+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-09T14:37:15.581+0000] {baseoperator.py:421} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-02-09T14:37:15.594+0000] {external_task.py:258} INFO - Poking for tasks ['extract_postgres_data'] in dag extract_postgres_and_csv_data on 2025-02-09T14:25:22.438682+00:00 ... 
+[2025-02-09T14:37:15.595+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:97: DeprecationWarning: This method is deprecated and will be removed in future.
+  return func(*args, session=session, **kwargs)
+
+[2025-02-09T14:37:15.643+0000] {taskinstance.py:309} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-02-09T14:37:15.644+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-09T14:37:15.674+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-09T14:37:15.926+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-09T14:37:15.929+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-02-09T14:38:18.820+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-09T14:38:18.881+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Load_CSV_to_Postgres.wait_for_extract manual__2025-02-09T14:25:22.438682+00:00 [queued]>
+[2025-02-09T14:38:18.896+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Load_CSV_to_Postgres.wait_for_extract manual__2025-02-09T14:25:22.438682+00:00 [queued]>
+[2025-02-09T14:38:18.896+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-09T14:38:18.931+0000] {taskinstance.py:2889} INFO - Executing <Task(ExternalTaskSensor): wait_for_extract> on 2025-02-09 14:25:22.438682+00:00
+[2025-02-09T14:38:18.944+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1491) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-09T14:38:18.948+0000] {standard_task_runner.py:72} INFO - Started process 1493 to run task
+[2025-02-09T14:38:18.948+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Load_CSV_to_Postgres', 'wait_for_extract', 'manual__2025-02-09T14:25:22.438682+00:00', '--job-id', '115', '--raw', '--subdir', 'DAGS_FOLDER/Load_CSV_to_Postgres.py', '--cfg-path', '/tmp/tmpmal19m_t']
+[2025-02-09T14:38:18.951+0000] {standard_task_runner.py:105} INFO - Job 115: Subtask wait_for_extract
+[2025-02-09T14:38:19.530+0000] {task_command.py:467} INFO - Running <TaskInstance: Load_CSV_to_Postgres.wait_for_extract manual__2025-02-09T14:25:22.438682+00:00 [running]> on host 8c410daec8d3
+[2025-02-09T14:38:19.676+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Load_CSV_to_Postgres' AIRFLOW_CTX_TASK_ID='wait_for_extract' AIRFLOW_CTX_EXECUTION_DATE='2025-02-09T14:25:22.438682+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-09T14:25:22.438682+00:00'
+[2025-02-09T14:38:19.679+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-09T14:38:19.680+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-09T14:38:19.681+0000] {logging_mixin.py:190} INFO - Current task name:wait_for_extract state:running start_date:2025-02-09 14:38:18.882012+00:00
+[2025-02-09T14:38:19.682+0000] {logging_mixin.py:190} INFO - Dag name:Load_CSV_to_Postgres and current dag run status:running
+[2025-02-09T14:38:19.683+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-09T14:38:19.684+0000] {baseoperator.py:421} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-02-09T14:38:19.699+0000] {external_task.py:258} INFO - Poking for tasks ['extract_postgres_data'] in dag extract_postgres_and_csv_data on 2025-02-09T14:25:22.438682+00:00 ... 
+[2025-02-09T14:38:19.701+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:97: DeprecationWarning: This method is deprecated and will be removed in future.
+  return func(*args, session=session, **kwargs)
+
+[2025-02-09T14:38:19.755+0000] {taskinstance.py:309} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-02-09T14:38:19.756+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-09T14:38:19.815+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-09T14:38:20.096+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-09T14:38:20.107+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-02-09T14:39:23.950+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-09T14:39:23.978+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Load_CSV_to_Postgres.wait_for_extract manual__2025-02-09T14:25:22.438682+00:00 [queued]>
+[2025-02-09T14:39:23.989+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Load_CSV_to_Postgres.wait_for_extract manual__2025-02-09T14:25:22.438682+00:00 [queued]>
+[2025-02-09T14:39:23.990+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-09T14:39:24.017+0000] {taskinstance.py:2889} INFO - Executing <Task(ExternalTaskSensor): wait_for_extract> on 2025-02-09 14:25:22.438682+00:00
+[2025-02-09T14:39:24.028+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1513) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-09T14:39:24.031+0000] {standard_task_runner.py:72} INFO - Started process 1515 to run task
+[2025-02-09T14:39:24.032+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Load_CSV_to_Postgres', 'wait_for_extract', 'manual__2025-02-09T14:25:22.438682+00:00', '--job-id', '117', '--raw', '--subdir', 'DAGS_FOLDER/Load_CSV_to_Postgres.py', '--cfg-path', '/tmp/tmp9l9gq4iw']
+[2025-02-09T14:39:24.034+0000] {standard_task_runner.py:105} INFO - Job 117: Subtask wait_for_extract
+[2025-02-09T14:39:24.489+0000] {task_command.py:467} INFO - Running <TaskInstance: Load_CSV_to_Postgres.wait_for_extract manual__2025-02-09T14:25:22.438682+00:00 [running]> on host 8c410daec8d3
+[2025-02-09T14:39:24.668+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Load_CSV_to_Postgres' AIRFLOW_CTX_TASK_ID='wait_for_extract' AIRFLOW_CTX_EXECUTION_DATE='2025-02-09T14:25:22.438682+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-09T14:25:22.438682+00:00'
+[2025-02-09T14:39:24.670+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-09T14:39:24.672+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-09T14:39:24.673+0000] {logging_mixin.py:190} INFO - Current task name:wait_for_extract state:running start_date:2025-02-09 14:39:23.979181+00:00
+[2025-02-09T14:39:24.674+0000] {logging_mixin.py:190} INFO - Dag name:Load_CSV_to_Postgres and current dag run status:running
+[2025-02-09T14:39:24.675+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-09T14:39:24.676+0000] {baseoperator.py:421} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-02-09T14:39:24.695+0000] {external_task.py:258} INFO - Poking for tasks ['extract_postgres_data'] in dag extract_postgres_and_csv_data on 2025-02-09T14:25:22.438682+00:00 ... 
+[2025-02-09T14:39:24.698+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:97: DeprecationWarning: This method is deprecated and will be removed in future.
+  return func(*args, session=session, **kwargs)
+
+[2025-02-09T14:39:24.763+0000] {taskinstance.py:309} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-02-09T14:39:24.765+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-09T14:39:24.821+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-09T14:39:24.841+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-02-09T14:40:27.876+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-09T14:40:27.900+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Load_CSV_to_Postgres.wait_for_extract manual__2025-02-09T14:25:22.438682+00:00 [queued]>
+[2025-02-09T14:40:27.910+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Load_CSV_to_Postgres.wait_for_extract manual__2025-02-09T14:25:22.438682+00:00 [queued]>
+[2025-02-09T14:40:27.911+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-09T14:40:27.933+0000] {taskinstance.py:2889} INFO - Executing <Task(ExternalTaskSensor): wait_for_extract> on 2025-02-09 14:25:22.438682+00:00
+[2025-02-09T14:40:27.942+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1535) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-09T14:40:27.945+0000] {standard_task_runner.py:72} INFO - Started process 1537 to run task
+[2025-02-09T14:40:27.946+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Load_CSV_to_Postgres', 'wait_for_extract', 'manual__2025-02-09T14:25:22.438682+00:00', '--job-id', '119', '--raw', '--subdir', 'DAGS_FOLDER/Load_CSV_to_Postgres.py', '--cfg-path', '/tmp/tmpey49y0pn']
+[2025-02-09T14:40:27.948+0000] {standard_task_runner.py:105} INFO - Job 119: Subtask wait_for_extract
+[2025-02-09T14:40:28.274+0000] {task_command.py:467} INFO - Running <TaskInstance: Load_CSV_to_Postgres.wait_for_extract manual__2025-02-09T14:25:22.438682+00:00 [running]> on host 8c410daec8d3
+[2025-02-09T14:40:28.372+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Load_CSV_to_Postgres' AIRFLOW_CTX_TASK_ID='wait_for_extract' AIRFLOW_CTX_EXECUTION_DATE='2025-02-09T14:25:22.438682+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-09T14:25:22.438682+00:00'
+[2025-02-09T14:40:28.374+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-09T14:40:28.375+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-09T14:40:28.376+0000] {logging_mixin.py:190} INFO - Current task name:wait_for_extract state:running start_date:2025-02-09 14:40:27.901255+00:00
+[2025-02-09T14:40:28.377+0000] {logging_mixin.py:190} INFO - Dag name:Load_CSV_to_Postgres and current dag run status:running
+[2025-02-09T14:40:28.377+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-09T14:40:28.378+0000] {baseoperator.py:421} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-02-09T14:40:28.390+0000] {external_task.py:258} INFO - Poking for tasks ['extract_postgres_data'] in dag extract_postgres_and_csv_data on 2025-02-09T14:25:22.438682+00:00 ... 
+[2025-02-09T14:40:28.391+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:97: DeprecationWarning: This method is deprecated and will be removed in future.
+  return func(*args, session=session, **kwargs)
+
+[2025-02-09T14:40:28.437+0000] {taskinstance.py:309} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-02-09T14:40:28.438+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-09T14:40:28.487+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-09T14:40:28.684+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-09T14:40:28.688+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

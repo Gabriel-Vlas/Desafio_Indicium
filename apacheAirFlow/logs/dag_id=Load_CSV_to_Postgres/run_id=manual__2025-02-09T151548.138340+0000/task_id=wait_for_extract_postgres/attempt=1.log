@@ -1,0 +1,67 @@
+[2025-02-09T15:15:52.222+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-09T15:15:52.263+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: load_csv_to_postgres.wait_for_extract_postgres manual__2025-02-09T15:15:48.138340+00:00 [queued]>
+[2025-02-09T15:15:52.278+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: load_csv_to_postgres.wait_for_extract_postgres manual__2025-02-09T15:15:48.138340+00:00 [queued]>
+[2025-02-09T15:15:52.280+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-09T15:15:52.317+0000] {taskinstance.py:2889} INFO - Executing <Task(ExternalTaskSensor): wait_for_extract_postgres> on 2025-02-09 15:15:48.138340+00:00
+[2025-02-09T15:15:52.331+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2051) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-09T15:15:52.334+0000] {standard_task_runner.py:72} INFO - Started process 2057 to run task
+[2025-02-09T15:15:52.335+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'load_csv_to_postgres', 'wait_for_extract_postgres', 'manual__2025-02-09T15:15:48.138340+00:00', '--job-id', '133', '--raw', '--subdir', 'DAGS_FOLDER/Load_CSV_to_Postgres.py', '--cfg-path', '/tmp/tmp9y9mxo32']
+[2025-02-09T15:15:52.337+0000] {standard_task_runner.py:105} INFO - Job 133: Subtask wait_for_extract_postgres
+[2025-02-09T15:15:52.417+0000] {task_command.py:467} INFO - Running <TaskInstance: load_csv_to_postgres.wait_for_extract_postgres manual__2025-02-09T15:15:48.138340+00:00 [running]> on host 8c410daec8d3
+[2025-02-09T15:15:53.813+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='load_csv_to_postgres' AIRFLOW_CTX_TASK_ID='wait_for_extract_postgres' AIRFLOW_CTX_EXECUTION_DATE='2025-02-09T15:15:48.138340+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-09T15:15:48.138340+00:00'
+[2025-02-09T15:15:53.815+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-09T15:15:53.816+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-09T15:15:53.818+0000] {logging_mixin.py:190} INFO - Current task name:wait_for_extract_postgres state:running start_date:2025-02-09 15:15:52.264330+00:00
+[2025-02-09T15:15:53.820+0000] {logging_mixin.py:190} INFO - Dag name:load_csv_to_postgres and current dag run status:running
+[2025-02-09T15:15:53.821+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-09T15:15:53.822+0000] {baseoperator.py:421} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-02-09T15:15:53.824+0000] {external_task.py:258} INFO - Poking for tasks ['extract_postgres_data'] in dag extract_postgres_and_csv_data on 2025-02-09T15:15:48.138340+00:00 ... 
+[2025-02-09T15:15:53.825+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:97: DeprecationWarning: This method is deprecated and will be removed in future.
+  return func(*args, session=session, **kwargs)
+
+[2025-02-09T15:16:52.071+0000] {external_task.py:258} INFO - Poking for tasks ['extract_postgres_data'] in dag extract_postgres_and_csv_data on 2025-02-09T15:15:48.138340+00:00 ... 
+[2025-02-09T15:17:50.296+0000] {external_task.py:258} INFO - Poking for tasks ['extract_postgres_data'] in dag extract_postgres_and_csv_data on 2025-02-09T15:15:48.138340+00:00 ... 
+[2025-02-09T15:18:48.508+0000] {external_task.py:258} INFO - Poking for tasks ['extract_postgres_data'] in dag extract_postgres_and_csv_data on 2025-02-09T15:15:48.138340+00:00 ... 
+[2025-02-09T15:19:46.718+0000] {external_task.py:258} INFO - Poking for tasks ['extract_postgres_data'] in dag extract_postgres_and_csv_data on 2025-02-09T15:15:48.138340+00:00 ... 
+[2025-02-09T15:20:44.925+0000] {external_task.py:258} INFO - Poking for tasks ['extract_postgres_data'] in dag extract_postgres_and_csv_data on 2025-02-09T15:15:48.138340+00:00 ... 
+[2025-02-09T15:21:43.144+0000] {external_task.py:258} INFO - Poking for tasks ['extract_postgres_data'] in dag extract_postgres_and_csv_data on 2025-02-09T15:15:48.138340+00:00 ... 
+[2025-02-09T15:22:41.375+0000] {external_task.py:258} INFO - Poking for tasks ['extract_postgres_data'] in dag extract_postgres_and_csv_data on 2025-02-09T15:15:48.138340+00:00 ... 
+[2025-02-09T15:23:39.556+0000] {external_task.py:258} INFO - Poking for tasks ['extract_postgres_data'] in dag extract_postgres_and_csv_data on 2025-02-09T15:15:48.138340+00:00 ... 
+[2025-02-09T15:23:52.951+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to queued. Terminating instance.
+[2025-02-09T15:23:52.953+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-02-09T15:23:52.957+0000] {process_utils.py:132} INFO - Sending 15 to group 2057. PIDs of all processes in the group: [2057]
+[2025-02-09T15:23:52.959+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 2057
+[2025-02-09T15:23:52.960+0000] {taskinstance.py:3093} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-02-09T15:23:52.985+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/sensors/external_task.py", line 348, in execute
+    super().execute(context)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/sensors/base.py", line 334, in execute
+    time.sleep(self._get_next_poke_interval(started_at, run_duration, poke_count))
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3095, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+[2025-02-09T15:23:53.002+0000] {logging_mixin.py:190} INFO - Task instance in failure state
+[2025-02-09T15:23:53.003+0000] {logging_mixin.py:190} INFO - Task start:2025-02-09 15:15:52.264330+00:00 end:2025-02-09 15:23:53.000055+00:00 duration:480.735725
+[2025-02-09T15:23:53.005+0000] {logging_mixin.py:190} INFO - Task:<Task(ExternalTaskSensor): wait_for_extract_postgres> dag:<DAG: load_csv_to_postgres> dagrun:<DagRun load_csv_to_postgres @ 2025-02-09 15:15:48.138340+00:00: manual__2025-02-09T15:15:48.138340+00:00, state:running, queued_at: 2025-02-09 15:15:48.167387+00:00. externally triggered: True>
+[2025-02-09T15:23:53.007+0000] {logging_mixin.py:190} INFO - Failure caused by Task received SIGTERM signal
+[2025-02-09T15:23:53.009+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=load_csv_to_postgres, task_id=wait_for_extract_postgres, run_id=manual__2025-02-09T15:15:48.138340+00:00, execution_date=20250209T151548, start_date=20250209T151552, end_date=20250209T152353
+[2025-02-09T15:23:53.045+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-09T15:23:53.094+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=2057, status='terminated', exitcode=2, started='15:15:51') (2057) terminated with exit code 2

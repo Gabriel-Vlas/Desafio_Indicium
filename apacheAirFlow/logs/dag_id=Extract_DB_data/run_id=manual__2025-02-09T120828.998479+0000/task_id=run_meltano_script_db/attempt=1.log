@@ -1,0 +1,28 @@
+[2025-02-09T12:08:34.193+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-09T12:08:34.223+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Extract_DB_data.run_meltano_script_db manual__2025-02-09T12:08:28.998479+00:00 [queued]>
+[2025-02-09T12:08:34.238+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Extract_DB_data.run_meltano_script_db manual__2025-02-09T12:08:28.998479+00:00 [queued]>
+[2025-02-09T12:08:34.239+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-09T12:08:34.499+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): run_meltano_script_db> on 2025-02-09 12:08:28.998479+00:00
+[2025-02-09T12:08:34.512+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=157) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-09T12:08:34.515+0000] {standard_task_runner.py:72} INFO - Started process 159 to run task
+[2025-02-09T12:08:34.517+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Extract_DB_data', 'run_meltano_script_db', 'manual__2025-02-09T12:08:28.998479+00:00', '--job-id', '70', '--raw', '--subdir', 'DAGS_FOLDER/Extract_DB_data.py', '--cfg-path', '/tmp/tmp623mb1bq']
+[2025-02-09T12:08:34.520+0000] {standard_task_runner.py:105} INFO - Job 70: Subtask run_meltano_script_db
+[2025-02-09T12:08:34.611+0000] {task_command.py:467} INFO - Running <TaskInstance: Extract_DB_data.run_meltano_script_db manual__2025-02-09T12:08:28.998479+00:00 [running]> on host be4fcd55613a
+[2025-02-09T12:08:34.794+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Extract_DB_data' AIRFLOW_CTX_TASK_ID='run_meltano_script_db' AIRFLOW_CTX_EXECUTION_DATE='2025-02-09T12:08:28.998479+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-09T12:08:28.998479+00:00'
+[2025-02-09T12:08:34.797+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-09T12:08:34.798+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-09T12:08:34.799+0000] {logging_mixin.py:190} INFO - Current task name:run_meltano_script_db state:running start_date:2025-02-09 12:08:34.224131+00:00
+[2025-02-09T12:08:34.800+0000] {logging_mixin.py:190} INFO - Dag name:Extract_DB_data and current dag run status:running
+[2025-02-09T12:08:34.801+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-09T12:08:35.171+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-02-09T12:08:35.190+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-09T12:08:35.191+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=Extract_DB_data, task_id=run_meltano_script_db, run_id=manual__2025-02-09T12:08:28.998479+00:00, execution_date=20250209T120828, start_date=20250209T120834, end_date=20250209T120835
+[2025-02-09T12:08:35.218+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-02-09T12:08:35.219+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-02-09T12:08:35.221+0000] {logging_mixin.py:190} INFO - Dag name:Extract_DB_data queued_at:2025-02-09 12:08:29.014079+00:00
+[2025-02-09T12:08:35.223+0000] {logging_mixin.py:190} INFO - Task hostname:be4fcd55613a operator:PythonOperator
+[2025-02-09T12:08:35.261+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-09T12:08:35.296+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-09T12:08:35.299+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
