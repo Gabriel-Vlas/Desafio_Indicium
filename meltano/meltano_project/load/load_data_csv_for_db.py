@@ -133,7 +133,7 @@ def fetch_orders_and_details():
         df = pd.DataFrame(result, columns=columns)
         
         # Exportar o DataFrame para Excel
-        df.to_excel("/opt/airflow/meltano/data/objetivo_final/orders_and_details.xlsx", index=False,engine='openpyxl')
+        df.to_excel("/opt/airflow/meltano/data/objetivo_final/LH_ED_GABRIEL_VLASSOV.xlsx", index=False,engine='openpyxl')
         print("Consulta exportada para Excel com sucesso!")
         
     except Exception as e:
